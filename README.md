@@ -1,0 +1,6 @@
+- 자바 애플리케이션에서 테스트를 작성하는 방법
+- 자바 애플리케이션 성능을 테스트하는 방법
+- 운영 환경 이슈를 테스트하는 방법
+- 애플리케이션 아키텍처를 테스트하는 방법
+- 도커를 사용하여 테스트하는 방법
+- JUnit 5, Mockito, Testcontainers, Chaos Monkey for Spring Boot, JMeter, ArchUnit
