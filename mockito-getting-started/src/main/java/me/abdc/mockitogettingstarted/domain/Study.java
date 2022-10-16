@@ -2,11 +2,12 @@ package me.abdc.mockitogettingstarted.domain;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.ManyToOne;
 import java.time.LocalDateTime;
 
-@Getter @Setter
+@Getter @Setter @ToString
 public class Study {
 
     private Long id;
