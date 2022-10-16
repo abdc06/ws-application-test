@@ -11,6 +11,9 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.doThrow;
+import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 class StudyServiceTest {
@@ -35,4 +38,28 @@ class StudyServiceTest {
         assertNotNull(studyService3);
     }
 
+    @Test
+    void stubbing() {
+        Optional<Member> member = memberService.findById(1L);
+        assertTrue(member.isEmpty());
+        assertFalse(member.isPresent());
+
+        Member mockMember = new Member();
+        mockMember.setId(1L);
+        mockMember.setEmail("abdc2806@email.com");
+
+        when(memberService.findById(any())).thenReturn(Optional.of(mockMember));
+
+                Optional<Member> member2 = memberService.findById(1L);
+        assertFalse(member2.isEmpty());
+        assertEquals("abdc2806@email.com", member2.get().getEmail());
+
+        doThrow(new IllegalArgumentException()).when(memberService).validate(1L);
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            memberService.validate(1L);
+        });
+
+        memberService.validate(2L);
+    }
 }

@@ -6,5 +6,7 @@ import lombok.Setter;
 @Getter @Setter
 public class Member {
 
-    private Long memberId;
+    private Long id;
+
+    private String email;
 }
