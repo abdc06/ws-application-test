@@ -9,7 +9,7 @@ class BasicTest {
     @Test
     void create() {
         System.out.println("create");
-        Basic study = new Basic();
+        Study study = new Study();
         assertNotNull(study);
     }
 

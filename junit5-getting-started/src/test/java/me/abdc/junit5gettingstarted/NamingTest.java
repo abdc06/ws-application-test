@@ -11,19 +11,19 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 public class NamingTest {
 
     @Test
-    @DisplayName("샘플 만들기")
-    void create_new_sample() {
-        System.out.println("create_new_basic");
-        Sample sample = new Sample();
-        assertNotNull(sample);
+    @DisplayName("스터디 만들기")
+    void create_new_study() {
+        System.out.println("create_new_study");
+        Study study = new Study();
+        assertNotNull(study);
     }
 
     @Test
-    @DisplayName("또 다른 샘플 만들기")
-    void create_new_another_sample() {
-        System.out.println("create_new_another_basic");
-        Sample sample = new Sample();
-        assertNotNull(sample);
+    @DisplayName("또 다른 스터디 만들기")
+    void create_new_another_study() {
+        System.out.println("create_new_another_study");
+        Study study = new Study();
+        assertNotNull(study);
     }
 
 }
