@@ -34,3 +34,5 @@
 
 ### CLI 사용하기
 - jmeter -n -t 설정 파일 -l 리포트 파일
+
+![jmeter-result](docs/jmeter-result.png)
