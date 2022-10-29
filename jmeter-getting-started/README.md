@@ -36,3 +36,8 @@
 - jmeter -n -t 설정 파일 -l 리포트 파일
 
 ![jmeter-result](docs/jmeter-result.png)
+
+## JMeter 대체제
+
+- [Gatling](https://gatling.io/)
+- [nGrinder](https://naver.github.io/ngrinder/)
